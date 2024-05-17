@@ -1,0 +1,54 @@
+version: 2
+
+seeds:
+  - name: stg
+    +schema: stg
+    tables:
+      - name: countries_alias
+      - name: countries
+      - name: currencies
+      - name: provinces
+      - name: school_typologies
+      - name: states
+      - name: schools
+      - name: students
+      - name: student_applications
+      - name: access_requirements
+      - name: cities_alias
+
+sources:
+  - name: staging
+    description: staging dataset
+    schema: habacus_dbt_stg
+    tables:
+      - name: schools
+        columns:
+          - name: id
+            description: Primary key of the table
+            tests:
+              - unique
+              - not_null
+          - name: city
+            description: School's city
+            tests:
+              - not_null
+      - name: access_requirements
+      - name: students
+      - name: student_applications
+      - name: countries_alias
+        columns:
+          - name: id
+            description: Primary key of the table
+            tests:
+              - unique
+              - not_null
+          - name: country_id
+            description: FK with countries table
+      - name: countries
+      - name: cities
+      - name: cities_alias
+
+models:
+  - name: schools
+    description: curated schools table 
+    schema: curated

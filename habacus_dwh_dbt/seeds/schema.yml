@@ -1,0 +1,27 @@
+version: 2
+
+seeds:
+  - name: schools
+    description: "Schools fact table"
+  - name: student_applications
+    description: "Student applications"
+  - name: access_requirements
+    description: "Requirements to access student loans"
+  - name: students
+    description: "Student base"
+  - name: countries_alias
+    description: "Lookup table for countries alias"
+  - name: countries
+    description: "Lookup table for countries"
+  - name: currencies
+    description: "Lookup table for currencies"
+  - name: provinces
+    description: "Lookup table for provinces"
+  - name: school_typologies
+    description: "Lookup table for school_typologies"
+  - name: states
+    description: "Lookup table for states"
+  - name: cities
+    description: "Lookup table for cities"
+  - name: cities_alias
+    description: "Lookup table for cities alias"
