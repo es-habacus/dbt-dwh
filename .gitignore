@@ -3,3 +3,4 @@ venv-dbt/
 data/
 *.csv
 *.json
+.DS_Store
