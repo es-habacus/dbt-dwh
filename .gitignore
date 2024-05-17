@@ -1,2 +1,5 @@
 venv-dbt/
 .vscode/
+data/
+*.csv
+*.json
